@@ -8,12 +8,34 @@
 body {
   background-color: #333;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
+  margin: 0 auto;
   font-size: 7.5vmin;
+  width: 90vmin;
 }
+
+/* 
+ * TITLE
+ */
+
+.title {
+  color: #ccc;
+  margin-bottom: 0;
+  font-size: 7vmin;
+}
+
+.subtitle {
+  color: #ccc;
+  font-size: 3vmin;
+  margin-top: 0;
+  margin-bottom: 8vmin;
+}
+
+/*
+ * GAME BOARD
+ */
 
 #game-board {
   display: grid;
@@ -24,6 +46,7 @@ body {
   border-radius: 1vmin;
   padding: var(--cell-gap);
   position: relative;
+  margin-bottom: 5vmin;
 }
 
 .cell {
@@ -39,7 +62,6 @@ body {
   width: var(--cell-size);
   height: var(--cell-size);
   border-radius: 1vmin;
-  background-color: yellow;
   top: calc(var(--y) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap));
   left: calc(var(--x) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap));
   font-weight: bold;
@@ -54,4 +76,38 @@ body {
     opacity: 0.5;
     transform: scale(0);
   }
+}
+
+/* 
+ * FOOTER
+ */
+
+.tips {
+  font-size: 3vmin;
+  color: #ccc;
+}
+
+.footer-heart {
+  text-align: center;
+  font-family: open sans, sans-serif;
+  font-size: 2vmin;
+  color: #ccc;
+}
+
+.footer-heart a {
+  /* border-bottom: 1px solid hsl(250, 41%, 68%); */
+  color: hsl(250, 41%, 68%);
+  padding-bottom: 0.25em;
+  text-decoration: none;
+}
+
+.footer-heart a:hover {
+  color: #2196f3;
+  border-bottom: 0;
+  padding-bottom: 0.3em;
+  text-decoration: none;
+}
+
+.emoji {
+  vertical-align: middle;
 }
